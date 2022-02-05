@@ -24,28 +24,19 @@ module.exports = {
        * https://tailwindcss.com/docs/customizing-colors#custom-colors
        * */
       blue: {
-        light: "#6495ED", // text-blue-light
-        DEFAULT: "#0047AB", // text-blue
-        dark: "#00008B", // text-blue-dark
-        100: "#ff0000", // text-blue-100
+        DEFAULT: "#304a64", // text-blue
       },
-      pink: {
-        light: "#ff7ce5",
-        DEFAULT: "#ff49db",
-        dark: "#ff16d1",
+      green: {
+        DEFAULT: "#bdf1e7",
       },
-      gray: {
-        darkest: "#1f2d3d",
-        dark: "#3c4858",
-        DEFAULT: "#c0ccda",
-        light: "#e0e6ed",
-        lightest: "#f9fafc",
+      orange: {
+        DEFAULT: "#e3682b",
       },
       white: {
-        DEFAULT: "#ffffff",
+        DEFAULT: "#f5ebe8",
       },
       black: {
-        DEFAULT: "#000000",
+        DEFAULT: "#141414",
       },
     },
   },
