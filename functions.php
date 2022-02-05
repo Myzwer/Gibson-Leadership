@@ -8,7 +8,7 @@
  * @link https://developer.wordpress.org/themes/basics/theme-functions/
  *
  * @package WordPress
- * @subpackage Pre_Launch_WP
+ * @subpackage GL_WP
  * @since 1.0.0
  */
 

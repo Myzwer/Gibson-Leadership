@@ -10,7 +10,7 @@
  * @link https://developer.wordpress.org/reference/classes/walker/
  *
  * @package WordPress
- * @subpackage Pre_Launch_WP
+ * @subpackage GL_WP
  * @since 1.0.0
  */
 
