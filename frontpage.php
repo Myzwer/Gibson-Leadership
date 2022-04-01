@@ -134,5 +134,83 @@ get_header(); ?>
         </div>
     </div>
 
+    <div class="bg-blue">
+        <div class="lg:max-w-6xl lg:text-center lg:mx-auto py-10 px-5">
+            <div class="grid grid-cols-12 gap-4">
+                <div class="col-span-12 md:col-span-7 relative">
+                    <div class="content-middle-medium">
+                        <div class="text-left mb-1 text-white">
+                            <h1 class="text-2xl font-bold ">Gibson Leadership Courses</h1>
+                            <p class="text-xl pb-3">Practical Leadership advice to help you be the best you can
+                                be.</p>
+                            <button class="mx-auto lg:mx-0 hover:underline bg-orange text-white font-bold rounded-full py-2 px-8 shadow-lg focus:outline-none focus:shadow-outline transform transition hover:scale-105 duration-300 ease-in-out">
+                                See All Books
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-span-12 md:col-span-5 mx-auto text-center">
+                    <img class = "rounded-md shadow-xl" src="http://gibson-leadership.local/wp-content/uploads/2022/03/Homepage-Header.jpg" alt="">
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="bg-white">
+        <div class="bg-no-repeat bg-scroll bg-cover relative p-5"
+             style="background: linear-gradient(
+  rgba(245, 235, 232, 0.45),
+  rgba(245, 235, 232, 0.45)
+), url('http://gibson-leadership.local/wp-content/uploads/2022/02/background.png') center center;">
+            <div class="lg:max-w-6xl lg:mx-auto pt-10">
+                <div class="grid grid-cols-12 gap-4 md:gap-8">
+                    <div class="col-span-12 md:col-span-4">
+                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Amet animi aut consequatur cum dolores eligendi explicabo fuga fugit impedit itaque iusto, laudantium maxime mollitia, quaerat rem similique sunt voluptatibus voluptatum?</p>
+                    </div>
+                    <div class="col-span-12 md:col-span-4">
+                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Amet animi aut consequatur cum dolores eligendi explicabo fuga fugit impedit itaque iusto, laudantium maxime mollitia, quaerat rem similique sunt voluptatibus voluptatum?</p>
+                    </div>
+                    <div class="col-span-12 md:col-span-4">
+                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Amet animi aut consequatur cum dolores eligendi explicabo fuga fugit impedit itaque iusto, laudantium maxime mollitia, quaerat rem similique sunt voluptatibus voluptatum?</p>
+                    </div>
+
+                    <div class="col-span-12 md:col-start-4 md:col-span-6 pt-10 font-bold uppercase text-center">
+                        <p class = "center">Gibson Leadership has helped these brands become something great or whatever</p>
+                    </div>
+                    <div class="col-span-12 font-bold uppercase text-center mx-auto">
+                        <img class = "w-16 md:w-24 inline-block" src="https://images.squarespace-cdn.com/content/v1/575a6067b654f9b902f452f4/1552683653140-0UUVQSSUEWVC73AWAEQG/300Logo.png"
+                             alt="Company Logo">
+                        <img class = "w-16 md:w-24 inline-block" src="https://images.squarespace-cdn.com/content/v1/575a6067b654f9b902f452f4/1552683653140-0UUVQSSUEWVC73AWAEQG/300Logo.png"
+                             alt="Company Logo">
+                        <img class = "w-16 md:w-24 inline-block" src="https://images.squarespace-cdn.com/content/v1/575a6067b654f9b902f452f4/1552683653140-0UUVQSSUEWVC73AWAEQG/300Logo.png"
+                             alt="Company Logo">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="bg-blue">
+        <div class="lg:max-w-6xl lg:text-center lg:mx-auto py-10 px-5">
+            <div class="grid grid-cols-12 gap-4">
+                <div class="col-span-12 md:col-span-7 relative">
+                    <div class="content-middle-medium">
+                        <div class="text-left mb-1 text-white">
+                            <h1 class="text-2xl font-bold ">Schedule Speaking</h1>
+                            <p class="text-xl pb-3">Want Greg to come speak to you or your team? Book a time now.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-span-12 md:col-span-5 mx-auto text-center">
+                    <button class="mx-auto lg:mx-0 hover:underline bg-orange text-white font-bold rounded-full py-2 px-8 shadow-lg focus:outline-none focus:shadow-outline transform transition hover:scale-105 duration-300 ease-in-out">
+                        Schedule A Time
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+
 <?php
 get_footer();
