@@ -65,26 +65,28 @@ get_header(); ?>
 
     <div class="bg-blue relative">
         <div class="grid grid-cols-12 md:h-3/6">
-            <div class="col-span-6">
+            <div class="hidden md:block md:col-span-6">
                 <div class="bg-no-repeat bg-scroll bg-cover relative pb-8 h-full"
                      style="background: linear-gradient(
-  rgba(0, 0, 0, 0.45),
-  rgba(0, 0, 0, 0.45)
-), url('http://gibson-leadership.local/wp-content/uploads/2022/03/Homepage-Header.jpg') top center;">
+                      rgba(0, 0, 0, 0.45),
+                      rgba(0, 0, 0, 0.45)
+                    ), url('http://gibson-leadership.local/wp-content/uploads/2022/03/Homepage-Header.jpg') top center;">
                 </div>
             </div>
 
-            <div class="col-span-6 relative px-10 md:py-40">
+            <div class="col-span-12 md:col-span-6 relative p-5 md:px-10 md:py-40">
                 <div class="">
-                    <h2 class="uppercase text-white text-5xl">Get your free resource today</h2>
-                    <h3 class="uppercase text-white text-3xl">5 ways you can be a better leader <span
+                    <h2 class="uppercase text-white font-bold text-4xl md:text-5xl">Get your free resource today</h2>
+                    <h3 class="uppercase text-white text-2xl md:text-3xl pt-3">5 ways you can be a better leader <span
                                 class="text-orange">today</span></h3>
-                    <?php if (have_posts()) : while (have_posts()) : the_post();
-                        the_content();
-                    endwhile;
-                    else: ?>
-                        <p>Sorry, no posts matched your criteria.</p>
-                    <?php endif; ?>
+                    <div class="text-white pt-10">
+                        <?php if (have_posts()) : while (have_posts()) : the_post();
+                            the_content();
+                        endwhile;
+                        else: ?>
+                            <p>Sorry, no posts matched your criteria.</p>
+                        <?php endif; ?>
+                    </div>
                 </div>
             </div>
         </div>
