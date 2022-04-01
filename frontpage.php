@@ -92,6 +92,47 @@ get_header(); ?>
         </div>
     </div>
 
+    <div class="bg-white">
+        <div class="bg-no-repeat bg-scroll bg-cover relative p-5"
+             style="background: linear-gradient(
+  rgba(245, 235, 232, 0.45),
+  rgba(245, 235, 232, 0.45)
+), url('http://gibson-leadership.local/wp-content/uploads/2022/02/background.png') center center;">
+            <div class="lg:max-w-6xl lg:text-center lg:mx-auto pt-10">
+                <div class="grid grid-cols-12 gap-4">
+                    <div class="col-span-12 md:col-span-6 mx-auto text-center">
+                        <div class="w-3/12 pb-6 inline-block">
+                            <img class="shadow-xl rounded-md"
+                                 src="http://gibson-leadership.local/wp-content/uploads/2022/04/Book-Covers.png" alt="">
+                        </div>
+                        <div class="w-4/12 inline-block">
+                            <img class="shadow-xl rounded-md"
+                                 src="http://gibson-leadership.local/wp-content/uploads/2022/04/Book-Cover-3.jpg"
+                                 alt="">
+                        </div>
+                        <div class="w-3/12 pb-6 inline-block">
+                            <img class="shadow-xl rounded-md"
+                                 src="http://gibson-leadership.local/wp-content/uploads/2022/04/Book-Cover-2.jpg"
+                                 alt="">
+                        </div>
+                    </div>
+
+                    <div class="col-span-12 md:col-span-6 relative">
+                        <div class="content-middle-medium">
+                            <div class="text-left mb-1">
+                                <h1 class="text-black text-2xl font-bold ">Gibson Leadership Books</h1>
+                                <p class="text-xl pb-3">Practical Leadership advice to help you be the best you can
+                                    be.</p>
+                                <button class="mx-auto lg:mx-0 hover:underline bg-orange text-white font-bold rounded-full py-2 px-8 shadow-lg focus:outline-none focus:shadow-outline transform transition hover:scale-105 duration-300 ease-in-out">
+                                    See All Books
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
 
 <?php
 get_footer();
