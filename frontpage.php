@@ -191,7 +191,7 @@ get_header(); ?>
         </div>
     </div>
 
-    <div class="bg-blue">
+    <div class="bg-blue py-16">
         <div class="lg:max-w-6xl lg:text-center lg:mx-auto py-10 px-5">
             <div class="grid grid-cols-12 gap-4">
                 <div class="col-span-12 md:col-span-7 relative">
