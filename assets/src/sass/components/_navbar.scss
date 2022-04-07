@@ -13,7 +13,7 @@
 
 // Navbar quick settings
 $content-width: 2500px; // How wide or narrow do you want the bar to be?
-$breakpoint: 799px; // When do you want to switch from mobile to desktop?
+$breakpoint: 1001px; // When do you want to switch from mobile to desktop?
 $nav-height: 70px; // How tall do you want the navbar to be?
 $nav-background: #304A64; // What background color do you want?
 $nav-font-color: #F5EBE8; // What primary font color?
@@ -31,6 +31,7 @@ $button-hover-color: #de5c18; // What hover color do you want the button to be?
 .brand {
   float: left;
   font-size: 1.4em;
+  font-weight: 400;
   line-height: $nav-height;
   padding-left: 20px;
   position: absolute;
@@ -43,8 +44,13 @@ $button-hover-color: #de5c18; // What hover color do you want the button to be?
 
   // If you change your navbar height, you may need to adjust this.
   img {
-    height: 50px;
-    margin-top: 10px;
+    height: 55px;
+    padding-right: 15px;
+    padding-top: 8px;
+  }
+
+  h1 {
+    display: none;
   }
 }
 
@@ -52,7 +58,6 @@ $button-hover-color: #de5c18; // What hover color do you want the button to be?
 .nav-container {
   margin: 0 auto;
   max-width: $content-width;
-  padding-right: 10px;
 }
 
 // Navigation
@@ -66,6 +71,7 @@ nav {
     li {
       float: left;
       position: relative;
+      text-transform: uppercase;
       a,
       a:visited {
         background: $nav-background;
@@ -95,7 +101,7 @@ nav {
 }
 
 // removes the position absolute from mobile.
-@media screen and (min-width: $breakpoint) {
+@media screen and (min-width: 1000px) {
   nav {
     position: relative;
   }
@@ -121,7 +127,7 @@ nav {
   top: 0;
   width: $nav-height;
 }
-@media only screen and (max-width: 798px) {
+@media only screen and (max-width: 1000px) {
   // Hamburger nav visible on mobile only
   .nav-mobile {
     display: block;
@@ -208,54 +214,56 @@ nav {
   }
 }
 
-.navigation {
-  li:last-of-type {
-    align-self: center;
-    background-color: $button-color;
-    color: #ffffff;
-    cursor: pointer;
-    letter-spacing: 1px;
-    text-align: center;
-    text-transform: uppercase;
-    transition: all 0.1s ease-in-out;
+
+.nav-list > li:last-of-type {
+  align-self: center;
+  background-color: $button-color;
+  color: #ffffff;
+  cursor: pointer;
+  letter-spacing: 1px;
+  text-align: center;
+  text-transform: uppercase;
+  transition: all 0.1s ease-in-out;
+}
+
+.nav-list > li:last-of-type a {
+  background-color: rgba(0, 0, 0, 0);
+  color: #ffffff;
+}
+
+.nav-list > li:last-of-type:hover a {
+  background-color: rgba(0, 0, 0, 0);
+  color: #ffffff;
+}
+
+.nav-list > li:last-of-type:hover {
+  background: $button-hover-color;
+}
+
+.nav-list > li:last-of-type:active {
+  transform: scale(1.025);
+}
+
+@media screen and (min-width: $breakpoint) {
+  .nav-list > li:last-of-type {
+    border-radius: 10px;
+    margin-left: 6px;
+    margin-right: 10px;
+    margin-top: 18px;
   }
 
-  li:last-of-type a {
+  .nav-list > .nav-list > li:last-of-type a {
     background-color: rgba(0, 0, 0, 0);
   }
 
-  li:last-of-type:hover a {
+  .nav-list > li:last-of-type:hover a {
     background-color: rgba(0, 0, 0, 0);
   }
 
-  li:last-of-type:hover {
-    background: $button-hover-color;
-  }
-
-  li:last-of-type:active {
-    transform: scale(1.025);
-  }
-
-  @media screen and (min-width: $breakpoint) {
-    li:last-of-type {
-      border-radius: 10px;
-      margin-left: 6px;
-      margin-top: 15px;
-    }
-
-    li:last-of-type a {
-      background-color: rgba(0, 0, 0, 0);
-    }
-
-    li:last-of-type:hover a {
-      background-color: rgba(0, 0, 0, 0);
-    }
-
-    nav ul li:last-of-type a,
-    nav ul li:last-of-type a:visited {
-      line-height: 10px;
-      padding: 15px;
-    }
+  nav ul li:last-of-type a,
+  nav ul li:last-of-type a:visited {
+    line-height: 1px;
+    padding: 15px;
   }
 }
 
