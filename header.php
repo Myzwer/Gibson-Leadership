@@ -36,7 +36,7 @@
 
 
 <!--Start Navbar-->
-<section class="navigation">
+<section class="navigation relative z-10">
     <div class="nav-container">
         <div class="brand">
             <a href="/frontpage">
