@@ -80,3 +80,19 @@
     width: 100%;
   }
 }
+
+.split-bg {
+  height: 80vh;
+}
+
+@media screen and (min-width: 40em) {
+  .split-bg {
+    height: 50vh;
+  }
+}
+
+.photo-split-bg {
+  height: 50vh;
+}
+
+

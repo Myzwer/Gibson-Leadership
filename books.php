@@ -12,23 +12,23 @@
 get_header(); ?>
 
     <div class="bg-white">
-        <div class="bg-no-repeat bg-scroll bg-cover relative"
+        <div class="bg-no-repeat bg-scroll bg-cover relative split-bg"
              style="background: linear-gradient(
   rgba(245, 235, 232, 0.45),
   rgba(245, 235, 232, 0.45)
-), url('http://gibson-leadership.local/wp-content/uploads/2022/02/background.png') center center; height: 50vh;">
+), url('http://gibson-leadership.local/wp-content/uploads/2022/02/background.png') center center;">
         <div class="grid grid-cols-12 md:h-3/6">
             <div class="col-span-12 md:col-span-6">
-                <div class="bg-no-repeat bg-scroll bg-cover relative pb-8 h-full"
+                <div class="bg-no-repeat bg-scroll bg-cover relative pb-8 photo-split-bg"
                      style="background: linear-gradient(
                       rgba(0, 0, 0, 0.45),
                       rgba(0, 0, 0, 0.45)
-                    ), url('http://gibson-leadership.local/wp-content/uploads/2022/03/Homepage-Header.jpg') top center; height: 50vh;"">
+                    ), url('http://gibson-leadership.local/wp-content/uploads/2022/03/Homepage-Header.jpg') top center;">
                 </div>
             </div>
 
             <div class="col-span-12 md:col-span-6 relative p-5 md:px-10 md:py-40">
-                <div class="content-middle-medium px-5">
+                <div class="content-middle-medium md:px-5">
                     <h1 class="uppercase text-black font-bold text-4xl md:text-5xl">GL Books</h1>
                     <h2 class="uppercase text-black text-2xl md:text-3xl pt-3">Short one sentence CTA of the Books of Gibson Leadership</h2>
                 </div>
