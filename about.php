@@ -11,61 +11,57 @@
 
 get_header(); ?>
 
-
-    <div class="bg-no-repeat bg-scroll bg-cover relative" style="background: linear-gradient(
-  rgba(0, 0, 0, 0.45),
-  rgba(0, 0, 0, 0.45)
-), url('http://gibson-leadership.local/wp-content/uploads/2022/03/Homepage-Header.jpg') top center;
- height: 60vh;">
-        <div class="content-middle text-white text-center">
-            <div class="center add-padding w-3/4 md:w-1/2 lg:w-1/3 mx-auto">
-                <img src="http://gibson-leadership.local/wp-content/uploads/2022/02/Full-Logo-White.png" alt="">
+    <?php if (have_rows('header_settings')): ?>
+        <?php while (have_rows('header_settings')): the_row(); ?>
+            <div class="bg-no-repeat bg-scroll bg-cover relative" style="background: linear-gradient(
+                    rgba(0, 0, 0, 0.<?php the_sub_field('tint') ?>),
+                    rgba(0, 0, 0, 0.<?php the_sub_field('tint') ?>)
+                    ), url('<?php the_sub_field('background_image') ?>') <?php the_sub_field('x_position') ?> <?php the_sub_field('y_position') ?>;
+                    height: 60vh;">
+                <div class="content-middle text-white text-center">
+                    <div class="center add-padding w-3/4 md:w-1/2 lg:w-1/3 mx-auto">
+                        <img src="<?php the_field('gl_logo') ?>" alt="Gibson Leadership Logo">
+                    </div>
+                </div>
             </div>
-        </div>
-    </div>
-
+        <?php endwhile; ?>
+    <?php endif; ?>
 
     <div class="bg-white">
         <div class="bg-no-repeat bg-scroll bg-cover relative pb-8"
              style="background: linear-gradient(
-  rgba(245, 235, 232, 0.45),
-  rgba(245, 235, 232, 0.45)
-), url('http://gibson-leadership.local/wp-content/uploads/2022/02/background.png') center center;">
+                     rgba(245, 235, 232, 0.45),
+                     rgba(245, 235, 232, 0.45)
+                     ), url('<?php the_field('about_background_image') ?>') center center;">
             <div class=" p-4 lg:max-w-6xl lg:text-center lg:mx-auto pt-10">
                 <div class="grid grid-cols-12 gap-4">
                     <div class="col-span-12 md:col-span-4">
                         <div class="text-left mb-1 md:p-8">
-                            <div class="mx-auto text-center pb-3">
-                                <i class="fa-solid fa-mountain text-6xl"></i>
+                            <div class="mx-auto text-center pb-3 text-6xl">
+                                <?php the_field('icon') ?>
                             </div>
-                            <h1 class="text-black text-5xl pb-3 uppercase">The <br/>Mission</h1>
-                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ad at cum laboriosam nobis
-                                voluptatem? Asperiores consequuntur corporis magni mollitia quasi quod repellat sapiente
-                                sint, ut veniam? Deserunt ex nam voluptatibus?</p>
+                            <h1 class="text-black text-3xl pb-3 uppercase"><?php the_field('title_1') ?></h1>
+                            <p><?php the_field('subtitle_1') ?></p>
                         </div>
                     </div>
 
                     <div class="col-span-12 md:col-span-4">
                         <div class="text-left mb-1 md:p-8">
-                            <div class="mx-auto text-center pb-3">
-                                <i class="fa-solid fa-arrow-right-arrow-left text-6xl"></i>
+                            <div class="mx-auto text-center pb-3 text-6xl">
+                                <?php the_field('icon') ?>
                             </div>
-                            <h1 class="text-black text-5xl pb-3 uppercase">The <br/>Vision</h1>
-                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ad at cum laboriosam nobis
-                                voluptatem? Asperiores consequuntur corporis magni mollitia quasi quod repellat sapiente
-                                sint, ut veniam? Deserunt ex nam voluptatibus?</p>
+                            <h1 class="text-black text-3xl pb-3 uppercase"><?php the_field('title_2') ?></h1>
+                            <p><?php the_field('subtitle_2') ?></p>
                         </div>
                     </div>
 
                     <div class="col-span-12 md:col-span-4">
                         <div class="text-left mb-1 md:p-8">
-                            <div class="mx-auto text-center pb-3">
-                                <i class="fa-solid fa-list-check text-6xl"></i>
+                            <div class="mx-auto text-center pb-3 text-6xl">
+                                <?php the_field('icon') ?>
                             </div>
-                            <h1 class="text-black text-5xl pb-3 uppercase">The <br/>Values</h1>
-                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ad at cum laboriosam nobis
-                                voluptatem? Asperiores consequuntur corporis magni mollitia quasi quod repellat sapiente
-                                sint, ut veniam? Deserunt ex nam voluptatibus?</p>
+                            <h1 class="text-black text-3xl pb-3 uppercase"><?php the_field('title_3') ?></h1>
+                            <p><?php the_field('subtitle_3') ?></p>
                         </div>
                     </div>
                 </div>
@@ -76,34 +72,18 @@ get_header(); ?>
     <div class="bg-blue">
         <div class="lg:max-w-6xl lg:text-center lg:mx-auto py-10 px-5">
             <div class="grid grid-cols-12 gap-4">
-                <div class="col-span-12 md:col-span-8 relative">
-                    <div class="text-left mb-1 text-white">
-                        <h1 class="text-2xl font-bold uppercase">About Greg</h1>
-                        <p class="text-md pb-3">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean diam
-                            nibh, dictum sit amet massa ut, semper congue libero. Proin auctor massa et turpis tempus
-                            ultrices. Vivamus nec nisl lobortis, luctus augue ut, rhoncus ante. Pellentesque mollis ante
-                            ut diam tempus, in ullamcorper quam laoreet. Vivamus volutpat, lorem vel elementum mollis,
-                            turpis diam ultricies augue, eu fermentum erat lacus ut est. Orci varius natoque penatibus
-                            et magnis dis parturient montes, nascetur ridiculus mus. Nunc mattis sodales semper. Aliquam
-                            viverra convallis diam ut eleifend. Fusce tincidunt et odio eget fringilla. Pellentesque
-                            habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Cras
-                            faucibus est vitae dui efficitur, eu posuere lacus commodo.</p>
-                        <p class="text-md pb-3">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean diam
-                            nibh, dictum sit amet massa ut, semper congue libero. Proin auctor massa et turpis tempus
-                            ultrices. Vivamus nec nisl lobortis, luctus augue ut, rhoncus ante. Pellentesque mollis ante
-                            ut diam tempus, in ullamcorper quam laoreet. Vivamus volutpat, lorem vel elementum mollis,
-                            turpis diam ultricies augue, eu fermentum erat lacus ut est. Orci varius natoque penatibus
-                            et magnis dis parturient montes, nascetur ridiculus mus. Nunc mattis sodales semper. Aliquam
-                            viverra convallis diam ut eleifend. Fusce tincidunt et odio eget fringilla. Pellentesque
-                            habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Cras
-                            faucibus est vitae dui efficitur, eu posuere lacus commodo.</p>
-
-                    </div>
+                <div class="col-span-12 md:col-span-4 mx-auto text-center">
+                    <img class="rounded-md shadow-xl"
+                         src="<?php the_field('bio_photo') ?>" alt="">
                 </div>
 
-                <div class="col-span-12 md:col-span-5 mx-auto text-center">
-                    <img class="rounded-md shadow-xl"
-                         src="http://gibson-leadership.local/wp-content/uploads/2022/03/Homepage-Header.jpg" alt="">
+                <div class="col-span-12 md:col-span-8 relative">
+                    <div class="text-left mb-1 text-white">
+                        <h1 class="text-2xl font-bold uppercase"><?php the_field('bio_title') ?></h1>
+                        <div class="text-md pb-3">
+                            <?php the_field('bio') ?>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
@@ -112,43 +92,59 @@ get_header(); ?>
     <div class="bg-white">
         <div class="bg-no-repeat bg-scroll bg-cover relative pb-8"
              style="background: linear-gradient(
-  rgba(245, 235, 232, 0.45),
-  rgba(245, 235, 232, 0.45)
-), url('http://gibson-leadership.local/wp-content/uploads/2022/02/background.png') center center;">
+                     rgba(245, 235, 232, 0.45),
+                     rgba(245, 235, 232, 0.45)
+                     ), url('<?php the_field('explore_background_image') ?>') center center;">
             <div class=" p-4 lg:max-w-6xl lg:text-center lg:mx-auto pt-10">
                 <div class="grid grid-cols-12 gap-4 md:gap-8">
                     <div class="col-span-12">
-                        <h1 class="text-2xl font-bold uppercase text-center">Explore More</h1>
+                        <h1 class="text-2xl font-bold uppercase text-center"><?php the_field('explore_title') ?></h1>
                     </div>
 
-                    <div class="col-span-12 md:col-span-6">
-                        <h2 class="text-xl font-bold uppercase text-center mb-3">Initiatives</h2>
-                        <div class="bg-green shadow-xl rounded-xl text-left p-10 md:h-64 relative">
-                            <div class="content-middle-medium w-10/12">
-                                <h6>Featured Initiative</h6>
-                                <h5 class="text-2xl uppercase font-bold">SALT Ukraine</h5>
-                                <p class="mb-3">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Laudantium
-                                    sapiente sint totam. </p>
-                                <button class="mx-auto lg:mx-0 hover:underline bg-orange text-white font-bold rounded-md py-2 px-8 shadow-lg focus:outline-none focus:shadow-outline transform transition hover:scale-105 duration-300 ease-in-out">
-                                    View All
-                                </button>
+                    <?php if (have_rows('item_1')): ?>
+                        <?php while (have_rows('item_1')): the_row(); ?>
+                            <div class="col-span-12 md:col-span-6">
+                                <h2 class="text-xl font-bold uppercase text-center mb-3">
+                                    <?php the_sub_field('type') ?>s
+                                </h2>
+                                <div class="bg-green shadow-xl rounded-xl text-left p-10 md:h-64 relative">
+                                    <div class="content-middle-medium w-10/12">
+                                        <h6>Featured <?php the_sub_field('type') ?></h6>
+                                        <h5 class="text-2xl uppercase font-bold"><?php the_sub_field('title') ?></h5>
+                                        <p class="mb-3"><?php the_sub_field('copy') ?></p>
+                                        <a href="<?php the_sub_field('button_link') ?>"></a>
+                                        <button class="mx-auto lg:mx-0 hover:underline bg-orange text-white font-bold rounded-md py-2 px-8 shadow-lg focus:outline-none focus:shadow-outline transform transition hover:scale-105 duration-300 ease-in-out">
+                                            <?php the_sub_field('button_text') ?>
+                                        </button>
+                                        </a>
+                                    </div>
+                                </div>
                             </div>
-                        </div>
-                    </div>
+                        <?php endwhile; ?>
+                    <?php endif; ?>
 
-                    <div class="col-span-12 md:col-span-6">
-                        <h2 class="text-xl font-bold uppercase text-center mb-3">Books</h2>
-                        <div class="bg-green shadow-xl rounded-xl text-left p-10 md:h-64 relative">
-                            <div class="content-middle-medium w-10/12">
-                                <h6>Featured Book</h6>
-                                <h5 class="text-2xl uppercase font-bold">Church Planted</h5>
-                                <p class="mb-3">Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
-                                <button class="mx-auto lg:mx-0 hover:underline bg-orange text-white font-bold rounded-md py-2 px-8 shadow-lg focus:outline-none focus:shadow-outline transform transition hover:scale-105 duration-300 ease-in-out">
-                                    View All
-                                </button>
+
+                    <?php if (have_rows('item_2')): ?>
+                        <?php while (have_rows('item_2')): the_row(); ?>
+                            <div class="col-span-12 md:col-span-6">
+                                <h2 class="text-xl font-bold uppercase text-center mb-3">
+                                    <?php the_sub_field('type') ?>s
+                                </h2>
+                                <div class="bg-green shadow-xl rounded-xl text-left p-10 md:h-64 relative">
+                                    <div class="content-middle-medium w-10/12">
+                                        <h6>Featured <?php the_sub_field('type') ?></h6>
+                                        <h5 class="text-2xl uppercase font-bold"><?php the_sub_field('title') ?></h5>
+                                        <p class="mb-3"><?php the_sub_field('copy') ?></p>
+                                        <a href="<?php the_sub_field('button_link') ?>"></a>
+                                        <button class="mx-auto lg:mx-0 hover:underline bg-orange text-white font-bold rounded-md py-2 px-8 shadow-lg focus:outline-none focus:shadow-outline transform transition hover:scale-105 duration-300 ease-in-out">
+                                            <?php the_sub_field('button_text') ?>
+                                        </button>
+                                        </a>
+                                    </div>
+                                </div>
                             </div>
-                        </div>
-                    </div>
+                        <?php endwhile; ?>
+                    <?php endif; ?>
                 </div>
             </div>
         </div>
@@ -159,42 +155,36 @@ get_header(); ?>
             <div class="grid grid-cols-12 gap-4">
                 <div class="col-span-12 relative">
                     <div class="text-left mb-1 text-white">
-                        <h1 class="text-2xl font-bold uppercase">Follow Greg</h1>
+                        <h1 class="text-2xl font-bold uppercase"><?php the_field('social_title') ?></h1>
                     </div>
                 </div>
-                <div class="col-span-12 md:col-span-4">
 
-                    <div class="grid grid-cols-12 gap-4 text-left text-white pb-5">
-                        <div class="col-span-3">
-                            <i class="fa-brands fa-facebook text-6xl inline"></i>
-                        </div>
-                        <div class="col-span-9">
-                            <h2 class = "pt-2 font-bold uppercase">Facebook </h2>
-                            <h2 class = "">Gregory Gibson</h2>
-                        </div>
-                    </div>
+                <?php
+                // Check rows exists.
+                if (have_rows('social_medias')):
+                    while (have_rows('social_medias')) : the_row(); ?>
 
-                    <div class="grid grid-cols-12 gap-4 text-left text-white pb-5">
-                        <div class="col-span-3">
-                            <i class="fa-brands fa-twitter-square text-6xl inline"></i>
+                        <div class="col-span-12 md:col-span-4">
+                            <div class="grid grid-cols-12 gap-4 text-left text-white pb-5">
+                                <div class="col-span-3">
+                                    <a href="<?php the_sub_field('link') ?>">
+                                        <div class="text-6xl">
+                                            <?php the_sub_field('icon') ?>
+                                        </div>
+                                    </a>
+                                </div>
+                                <div class="col-span-9">
+                                    <a href="<?php the_sub_field('link') ?>">
+                                        <h2 class="pt-2 font-bold uppercase"><?php the_sub_field('social_media') ?> </h2>
+                                        <h2 class=""><?php the_sub_field('username') ?></h2>
+                                    </a>
+                                </div>
+                            </div>
                         </div>
-                        <div class="col-span-9">
-                            <h2 class = "pt-2 font-bold uppercase">Twitter </h2>
-                            <h2 class = "">@gregorygibson</h2>
-                        </div>
-                    </div>
-
-                    <div class="grid grid-cols-12 gap-4 text-left text-white pb-5">
-                        <div class="col-span-3">
-                            <i class="fa-brands fa-instagram text-6xl inline"></i>
-                        </div>
-                        <div class="col-span-9">
-                            <h2 class = "pt-2 font-bold uppercase">Instagram </h2>
-                            <h2 class = "">@thegman</h2>
-                        </div>
-                    </div>
-
-                </div>
+                    <?php
+                    endwhile;
+                endif;
+                ?>
             </div>
         </div>
     </div>
