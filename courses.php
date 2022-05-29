@@ -52,8 +52,8 @@ get_header(); ?>
                 // Check rows exists.
                 if (have_rows('courses')):
                     while (have_rows('courses')) : the_row(); ?>
-                        <div class="col-span-12 bg-green p-10 rounded-xl shadow-xl">
-                            <div class="grid grid-cols-12">
+                        <div class="col-span-12 bg-green p-10 rounded-xl shadow-xl <?php the_sub_field('is_visible') ?>">
+                            <div class="grid grid-cols-12 gap-4">
                                 <div class="col-span-12 md:col-span-4">
                                     <img class="rounded-xl" src="<?php the_sub_field('image') ?> " alt="Course Image">
                                 </div>
