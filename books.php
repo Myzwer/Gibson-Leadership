@@ -51,7 +51,7 @@ get_header(); ?>
                 // Check rows exists.
                 if (have_rows('books')):
                     while (have_rows('books')) : the_row(); ?>
-                        <div class="col-span-12 bg-green p-10 rounded-xl shadow-xl mb-12">
+                        <div class="col-span-12 bg-green p-10 rounded-xl shadow-xl mb-12 <?php the_sub_field('is_visible') ?>">
                             <div class="grid grid-cols-12">
                                 <div class="col-span-12 md:col-span-4">
                                     <img <img class="rounded-xl w-3/4 -mt-24" src="<?php the_sub_field('image') ?> "
