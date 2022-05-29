@@ -27,7 +27,7 @@ get_header(); ?>
                          style="background: linear-gradient(
                                  rgba(0, 0, 0, 0.45),
                                  rgba(0, 0, 0, 0.45)
-                                 ), url('<?php the_sub_field('background_image') ?>') <?php the_sub_field('x_position') ?> <?php the_sub_field('y_position') ?> ; background-repeat: no-repeat; background-size: cover;">
+                                 ), url('<?php the_sub_field('background_image') ?>') <?php the_sub_field('x-position') ?> <?php the_sub_field('y-position') ?> ; background-repeat: no-repeat; background-size: cover;">
                     </div>
                 </div>
 
@@ -53,7 +53,7 @@ get_header(); ?>
                 if (have_rows('services')):
                     while (have_rows('services')) : the_row(); ?>
                         <div class="col-span-12 bg-green p-10 rounded-xl shadow-xl">
-                            <div class="grid grid-cols-12">
+                            <div class="grid grid-cols-12 gap-4">
                                 <div class="col-span-12 md:col-span-4">
                                     <img class="rounded-xl" src="<?php the_sub_field('image') ?> " alt="Course Image">
                                 </div>
