@@ -20,7 +20,6 @@
 
         <!--Company Logo-->
         <img src=<?php the_field('footer_icon_wp', 'options'); ?>"">
-        <p class="mission-statement">Lead Yourself. Know Your Why. Leave a Legacy.</p>
         <div class="footer-inner">
             <hr>
             <!--Company Info-->

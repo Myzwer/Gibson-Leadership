@@ -14,7 +14,7 @@
 get_header(); ?>
 
     <video class="header-video"
-           src="https://foothillscollective.com/wp-content/uploads/2021/04/Res-Power-Background.mp4" autoplay loop
+           src="<?php the_field('video_background') ?>" autoplay loop
            playsinline muted></video>
 
     <div class="viewport-header">
@@ -48,7 +48,7 @@ get_header(); ?>
             <div class="m-4 md:m-10 lg:max-w-6xl lg:text-center lg:mx-auto pt-10">
                 <div class="grid grid-cols-12">
                     <div class="col-span-12">
-                        <div class="text-left mb-1 wysiwyg">
+                        <div class="text-center mb-1 wysiwyg">
                             <?php the_field('all_copy') ?>
                             <?php if (have_rows('copy_cta_button')): ?>
                                 <?php while (have_rows('copy_cta_button')): the_row(); ?>
@@ -71,9 +71,9 @@ get_header(); ?>
             <div class="hidden md:block md:col-span-6">
                 <div class="bg-no-repeat bg-scroll bg-cover relative pb-8 h-full"
                      style="background: linear-gradient(
-                      rgba(0, 0, 0, 0.45),
-                      rgba(0, 0, 0, 0.45)
-                    ), url('<?php the_field('side_photo') ?>') top center;">
+                      rgba(0, 0, 0, 0.0),
+                      rgba(0, 0, 0, 0.0)
+                    ), url('<?php the_field('side_photo') ?>') top center; background-repeat: no-repeat; background-size: cover;">
                 </div>
             </div>
 
