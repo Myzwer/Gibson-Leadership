@@ -13,6 +13,29 @@
 
 get_header(); ?>
 
+    <!-- The Modal -->
+    <div id="modal-container">
+        <div class="modal-background">
+            <div class="modal">
+                <div class="modal-content">
+                    <div class="modal-top bg-orange relative">
+
+                        <div class="modal-icon">
+                            <img src="<?php the_field('modal_icon'); ?>" alt="GL Icon">
+                        </div>
+                    </div>
+                    <div class="modal-inner bg-white rounded-b-xl">
+                        <p class="pb-5"><?php the_field('modal_text'); ?></p>
+                        <div class="text-left">
+                        <?php echo do_shortcode("[gravityform id='3']"); ?>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--End Modal-->
+
     <video class="header-video"
            src="<?php the_field('video_background') ?>" autoplay loop
            playsinline muted></video>
@@ -27,11 +50,9 @@ get_header(); ?>
 
                 <?php if (have_rows('primary_cta_button')): ?>
                     <?php while (have_rows('primary_cta_button')): the_row(); ?>
-                        <a href="<?php the_sub_field('button_link') ?>">
-                            <button class="mx-auto mt-3 lg:mx-0 hover:underline bg-orange text-white font-bold rounded-full py-2 px-8 shadow-lg focus:outline-none focus:shadow-outline transform transition hover:scale-105 duration-300 ease-in-out">
+                            <button id="two"class=" button mx-auto mt-3 lg:mx-0 hover:underline bg-orange text-white font-bold rounded-full py-2 px-8 shadow-lg focus:outline-none focus:shadow-outline transform transition hover:scale-105 duration-300 ease-in-out">
                                 <?php the_sub_field('button_text') ?>
                             </button>
-                        </a>
                     <?php endwhile; ?>
                 <?php endif; ?>
             </div>
