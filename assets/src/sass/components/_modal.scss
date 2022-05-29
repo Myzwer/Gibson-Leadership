@@ -1,0 +1,216 @@
+/**
+ * Modal
+ * =================================
+ * The site has modals all over it for calendar downloads. This styles those since its tricky to do with Tailwind.
+ * - Navbar
+ *
+ *
+ *
+ */
+
+/* stylelint-disable selector-max-id, selector-max-compound-selectors */
+#modal-container {
+  display: table;
+  height: 100%;
+  left: 0;
+  position: fixed;
+  top: 0;
+  transform: scale(0);
+  width: 100%;
+  z-index: 30;
+}
+
+// Button 1 on the page
+#modal-container.one {
+  animation: unfoldIn 1s cubic-bezier(0.165, 0.84, 0.44, 1) forwards;
+  transform: scaleY(0.01) scaleX(0);
+}
+#modal-container.one .modal-background .modal {
+  animation: zoomIn 0.5s 0.8s cubic-bezier(0.165, 0.84, 0.44, 1) forwards;
+  transform: scale(0);
+}
+#modal-container.one.out {
+  animation: unfoldOut 1s 0.3s cubic-bezier(0.165, 0.84, 0.44, 1) forwards;
+  transform: scale(1);
+}
+#modal-container.one.out .modal-background .modal {
+  animation: zoomOut 0.5s cubic-bezier(0.165, 0.84, 0.44, 1) forwards;
+}
+
+// Button 2 on the page
+#modal-container.two {
+  animation: unfoldIn 1s cubic-bezier(0.165, 0.84, 0.44, 1) forwards;
+  transform: scaleY(0.01) scaleX(0);
+}
+#modal-container.two .modal-background .modal {
+  animation: zoomIn 0.5s 0.8s cubic-bezier(0.165, 0.84, 0.44, 1) forwards;
+  transform: scale(0);
+}
+#modal-container.two.out {
+  animation: unfoldOut 1s 0.3s cubic-bezier(0.165, 0.84, 0.44, 1) forwards;
+  transform: scale(1);
+}
+#modal-container.two.out .modal-background .modal {
+  animation: zoomOut 0.5s cubic-bezier(0.165, 0.84, 0.44, 1) forwards;
+}
+
+// Button 3 on the page
+#modal-container.three {
+  animation: unfoldIn 1s cubic-bezier(0.165, 0.84, 0.44, 1) forwards;
+  transform: scaleY(0.01) scaleX(0);
+}
+#modal-container.three .modal-background .modal {
+  animation: zoomIn 0.5s 0.8s cubic-bezier(0.165, 0.84, 0.44, 1) forwards;
+  transform: scale(0);
+}
+#modal-container.three.out {
+  animation: unfoldOut 1s 0.3s cubic-bezier(0.165, 0.84, 0.44, 1) forwards;
+  transform: scale(1);
+}
+#modal-container.three.out .modal-background .modal {
+  animation: zoomOut 0.5s cubic-bezier(0.165, 0.84, 0.44, 1) forwards;
+}
+
+// Button 4 on the page
+#modal-container.four {
+  animation: unfoldIn 1s cubic-bezier(0.165, 0.84, 0.44, 1) forwards;
+  transform: scaleY(0.01) scaleX(0);
+}
+#modal-container.four .modal-background .modal {
+  animation: zoomIn 0.5s 0.8s cubic-bezier(0.165, 0.84, 0.44, 1) forwards;
+  transform: scale(0);
+}
+#modal-container.four.out {
+  animation: unfoldOut 1s 0.3s cubic-bezier(0.165, 0.84, 0.44, 1) forwards;
+  transform: scale(1);
+}
+#modal-container.four.out .modal-background .modal {
+  animation: zoomOut 0.5s cubic-bezier(0.165, 0.84, 0.44, 1) forwards;
+}
+
+#modal-container .modal-background {
+  background: rgba(0, 0, 0, 0.8);
+  display: table-cell;
+  text-align: center;
+  vertical-align: middle;
+}
+#modal-container .modal-background .modal {
+  background-color: #fdfbef;
+  border-radius: 11px;
+  display: inline-block;
+  font-weight: 300;
+  margin: auto;
+  position: relative;
+  width: 80%;
+}
+
+@media screen and (min-width: 40em) {
+  #modal-container .modal-background .modal {
+    width: 500px;
+  }
+}
+#modal-container .modal-background .modal h2 {
+  font-size: 25px;
+  line-height: 25px;
+  margin-bottom: 15px;
+}
+#modal-container .modal-background .modal p {
+  font-size: 18px;
+  line-height: 22px;
+}
+#modal-container .modal-background .modal .modal-svg {
+  border-radius: 3px;
+  height: 100%;
+  left: 0;
+  position: absolute;
+  top: 0;
+  width: 100%;
+}
+#modal-container .modal-background .modal .modal-svg rect {
+  stroke: #ffffff;
+  stroke-dasharray: 778;
+  stroke-dashoffset: 778;
+  stroke-width: 2px;
+}
+
+@keyframes unfoldIn {
+  0% {
+    transform: scaleY(0.005) scaleX(0);
+  }
+  50% {
+    transform: scaleY(0.005) scaleX(1);
+  }
+  100% {
+    transform: scaleY(1) scaleX(1);
+  }
+}
+@keyframes unfoldOut {
+  0% {
+    transform: scaleY(1) scaleX(1);
+  }
+  50% {
+    transform: scaleY(0.005) scaleX(1);
+  }
+  100% {
+    transform: scaleY(0.005) scaleX(0);
+  }
+}
+@keyframes zoomIn {
+  0% {
+    transform: scale(0);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+@keyframes zoomOut {
+  0% {
+    transform: scale(1);
+  }
+  100% {
+    transform: scale(0);
+  }
+}
+@keyframes fadeIn {
+  0% {
+    background: rgba(0, 0, 0, 0);
+  }
+  100% {
+    background: rgba(0, 0, 0, 0.7);
+  }
+}
+@keyframes fadeOut {
+  0% {
+    background: rgba(0, 0, 0, 0.7);
+  }
+  100% {
+    background: rgba(0, 0, 0, 0);
+  }
+}
+
+.modal-inner {
+  padding: 20px;
+}
+
+.modal-top {
+  background-color: #1d5134;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+  padding: 60px 40px;
+  position: relative;
+  width: 100%;
+}
+
+.modal-icon {
+  color: #fdfbef;
+  font-size: 3em;
+  left: 50%;
+  position: absolute;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.modal-icon img {
+  width: 80px;
+}
+/* stylelint-enable selector-max-id, selector-max-compound-selectors */

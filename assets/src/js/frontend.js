@@ -1,5 +1,6 @@
 import "../sass/frontend.scss";
 
+// NAV MENU
 (function ($) {
   // Begin jQuery
   $(function () {
@@ -24,4 +25,29 @@ import "../sass/frontend.scss";
       this.classList.toggle("active");
     });
   }); // end DOM ready
+})(jQuery); // end jQuery
+
+// Add modal id and class for... well the modal.
+jQuery(document).ready(function ($) {
+  $(".nav-list > li:last-child").attr("id", "one");
+});
+jQuery(document).ready(function ($) {
+  $(".nav-list > li:last-child").attr("class", "button");
+});
+
+// MODAL POPUP
+(function ($) {
+  // The JS modal for all "mark your calendar" buttons.
+  window.onload = function () {
+    $(".button").click(function () {
+      const buttonId = $(this).attr("id");
+      $("#modal-container").removeAttr("class").addClass(buttonId);
+      $("body").addClass("modal-active");
+    });
+
+    $("#modal-container").click(function () {
+      $(this).addClass("out");
+      $("body").removeClass("modal-active");
+    });
+  };
 })(jQuery); // end jQuery
