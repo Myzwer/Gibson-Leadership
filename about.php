@@ -16,7 +16,7 @@ get_header(); ?>
             <div class="bg-no-repeat bg-scroll bg-cover relative" style="background: linear-gradient(
                     rgba(0, 0, 0, 0.<?php the_sub_field('tint') ?>),
                     rgba(0, 0, 0, 0.<?php the_sub_field('tint') ?>)
-                    ), url('<?php the_sub_field('background_image') ?>') <?php the_sub_field('x_position') ?> <?php the_sub_field('y_position') ?>;
+                    ), url('<?php the_sub_field('background_image') ?>') <?php the_sub_field('x-position') ?> <?php the_sub_field('y-position') ?>;
                     height: 60vh;">
                 <div class="content-middle text-white text-center">
                     <div class="center add-padding w-3/4 md:w-1/2 lg:w-1/3 mx-auto">
