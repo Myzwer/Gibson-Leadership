@@ -39,7 +39,7 @@
 <section class="navigation relative z-10">
     <div class="nav-container">
         <div class="brand">
-            <a href="/frontpage">
+            <a href="/">
                 <!--Company Logo / Branding. Template supports both Text and Logo-->
                 <img src="<?php the_field('header_icon_wp', 'options'); ?>" alt = "Gibson Leadership Logo">
             </a>
