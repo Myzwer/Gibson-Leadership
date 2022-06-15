@@ -45,8 +45,9 @@ jQuery(document).ready(function ($) {
       $("body").addClass("modal-active");
     });
 
-    $("#modal-container").click(function () {
-      $(this).addClass("out");
+    $(document).on("click", "#modal-container", function (event) {
+      if (event.target.closest(".modal")) return;
+      $("#modal-container").addClass("out");
       $("body").removeClass("modal-active");
     });
   };

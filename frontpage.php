@@ -48,13 +48,13 @@ get_header(); ?>
             <div class="p-5">
                 <h2 class="text-white uppercase text-xl pt-5"><?php the_field('header_tagline') ?></h2>
 
-                <?php if (have_rows('primary_cta_button')): ?>
-                    <?php while (have_rows('primary_cta_button')): the_row(); ?>
+               <!-- <?php /*if (have_rows('primary_cta_button')): */?>
+                    <?php /*while (have_rows('primary_cta_button')): the_row(); */?>
                             <button id="two"class=" button mx-auto mt-3 lg:mx-0 hover:underline bg-orange text-white font-bold rounded-full py-2 px-8 shadow-lg focus:outline-none focus:shadow-outline transform transition hover:scale-105 duration-300 ease-in-out">
-                                <?php the_sub_field('button_text') ?>
+                                <?php /*the_sub_field('button_text') */?>
                             </button>
-                    <?php endwhile; ?>
-                <?php endif; ?>
+                    <?php /*endwhile; */?>
+                --><?php /*endif; */?>
             </div>
         </div>
     </div>
