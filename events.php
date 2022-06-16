@@ -69,11 +69,16 @@ get_header(); ?>
                     $start_date = strtotime( $row['start'] );
                     if ($now < $start_date ) {
                    ?>
-                    <div class="col-span-12 bg-green p-10 rounded-xl shadow-xl <?php the_sub_field('is_visible') ?>">
+                    <div class="col-span-12 bg-green p-10 rounded-xl shadow-xl">
                         <div class="grid grid-cols-12 gap-4">
                             <div class="col-span-12 md:col-span-12 text-left">
                                 <h1 class="text-black text-3xl uppercase"><?php echo $row['title'] ?> </h1>
-                                <h2 class="text-black text-lg italics uppercase pb-5"><?php echo $row['start'] ?> - <?php echo $row['end'] ?>  </h2>
+                                <h2 class="text-black text-lg italics uppercase pb-5"><?php echo $row['start'] ?>
+                                <!-- Because I'll forget, this checks to see if "end" exists and doesn't display the line if it doesn't. Used when
+                                     the event only has a start date given, IE, a single day event. -->
+                                <?php if ($row['end'] ): ?>
+                                    <?php echo ' - ' . $row['end'] ?>  </h2>
+                                <?php endif; ?>
                                 <?php echo $row['copy'] ?>
 
                                 <div class="pt-5">
