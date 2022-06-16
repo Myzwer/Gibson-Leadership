@@ -112,7 +112,7 @@ get_header(); ?>
                                         <h6>Featured <?php the_sub_field('type') ?></h6>
                                         <h5 class="text-2xl uppercase font-bold"><?php the_sub_field('title') ?></h5>
                                         <p class="mb-3"><?php the_sub_field('copy') ?></p>
-                                        <a href="<?php the_sub_field('button_link') ?>"></a>
+                                        <a href="<?php the_sub_field('button_link') ?>">
                                         <button class="mx-auto lg:mx-0 hover:underline bg-orange text-white font-bold rounded-md py-2 px-8 shadow-lg focus:outline-none focus:shadow-outline transform transition hover:scale-105 duration-300 ease-in-out">
                                             <?php the_sub_field('button_text') ?>
                                         </button>
@@ -135,7 +135,7 @@ get_header(); ?>
                                         <h6>Featured <?php the_sub_field('type') ?></h6>
                                         <h5 class="text-2xl uppercase font-bold"><?php the_sub_field('title') ?></h5>
                                         <p class="mb-3"><?php the_sub_field('copy') ?></p>
-                                        <a href="<?php the_sub_field('button_link') ?>"></a>
+                                        <a href="<?php the_sub_field('button_link') ?>">
                                         <button class="mx-auto lg:mx-0 hover:underline bg-orange text-white font-bold rounded-md py-2 px-8 shadow-lg focus:outline-none focus:shadow-outline transform transition hover:scale-105 duration-300 ease-in-out">
                                             <?php the_sub_field('button_text') ?>
                                         </button>
@@ -167,14 +167,14 @@ get_header(); ?>
                         <div class="col-span-12 md:col-span-4">
                             <div class="grid grid-cols-12 gap-4 text-left text-white pb-5">
                                 <div class="col-span-3">
-                                    <a href="<?php the_sub_field('link') ?>">
+                                    <a href="<?php the_sub_field('link') ?>" target="_blank">
                                         <div class="text-6xl">
                                             <?php the_sub_field('icon') ?>
                                         </div>
                                     </a>
                                 </div>
                                 <div class="col-span-9">
-                                    <a href="<?php the_sub_field('link') ?>">
+                                    <a href="<?php the_sub_field('link') ?>" target="_blank">
                                         <h2 class="pt-2 font-bold uppercase"><?php the_sub_field('social_media') ?> </h2>
                                         <h2 class=""><?php the_sub_field('username') ?></h2>
                                     </a>

@@ -121,7 +121,7 @@ get_header(); ?>
                                         <h6>Featured <?php the_sub_field('type') ?></h6>
                                         <h5 class="text-2xl uppercase font-bold"><?php the_sub_field('title') ?></h5>
                                         <p class="mb-3"><?php the_sub_field('copy') ?></p>
-                                        <a href="<?php the_sub_field('button_link') ?>"></a>
+                                        <a href="<?php the_sub_field('button_link') ?>">
                                         <button class="mx-auto lg:mx-0 hover:underline bg-orange text-white font-bold rounded-md py-2 px-8 shadow-lg focus:outline-none focus:shadow-outline transform transition hover:scale-105 duration-300 ease-in-out">
                                             <?php the_sub_field('button_text') ?>
                                         </button>
@@ -144,7 +144,7 @@ get_header(); ?>
                                         <h6>Featured <?php the_sub_field('type') ?></h6>
                                         <h5 class="text-2xl uppercase font-bold"><?php the_sub_field('title') ?></h5>
                                         <p class="mb-3"><?php the_sub_field('copy') ?></p>
-                                        <a href="<?php the_sub_field('button_link') ?>"></a>
+                                        <a href="<?php the_sub_field('button_link') ?>">
                                         <button class="mx-auto lg:mx-0 hover:underline bg-orange text-white font-bold rounded-md py-2 px-8 shadow-lg focus:outline-none focus:shadow-outline transform transition hover:scale-105 duration-300 ease-in-out">
                                             <?php the_sub_field('button_text') ?>
                                         </button>
