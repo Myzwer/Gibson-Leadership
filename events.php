@@ -52,21 +52,25 @@ get_header(); ?>
                 <?php
                 // get the entire repeater in a multidimensional array
                 $repeater = get_field('events');
-                usort($repeater, 'start');
+                //the actual sorting
+                usort($repeater, 'event_sort');
 
-                // usort function
-                function start($a, $b) {
-                    if ($a['start'] == $b['end']) {
+                // usort function - compare everyting in the array and sort
+                function event_sort($a, $b) {
+                    if ($a['start'] == $b['start']) {
                         return 0;
-                    } elseif ($a['start'] < $b['end']) {
-                        return -1;
-                    } else {
+                    } elseif ($a['start'] < $b['start']) {
                         return 1;
+                    } else {
+                        return -1;
                     }
                 }
                 foreach ($repeater as $row) {
+                    // Get the current time minus a day.
                     $now = time()-86400;
+                    // Get the event start date
                     $start_date = strtotime( $row['start'] );
+                    // Compare the two, and show the event if the event is today or upcoming. Hide if not.
                     if ($now < $start_date ) {
                    ?>
                     <div class="col-span-12 bg-green p-10 rounded-xl shadow-xl">
