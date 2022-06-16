@@ -36,9 +36,9 @@ jQuery(document).ready(function ($) {
 });
 
 // MODAL POPUP
-(function ($) {
+// (function ($) {
   // The JS modal for all "mark your calendar" buttons.
-  window.onload = function () {
+/*  window.onload = function () {
     $(".button").click(function () {
       const buttonId = $(this).attr("id");
       $("#modal-container").removeAttr("class").addClass(buttonId);
@@ -51,4 +51,4 @@ jQuery(document).ready(function ($) {
       $("body").removeClass("modal-active");
     });
   };
-})(jQuery); // end jQuery
+})(jQuery);*/ // end jQuery
