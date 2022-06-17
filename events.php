@@ -55,7 +55,7 @@ get_header(); ?>
                 //the actual sorting
                 usort($repeater, 'event_sort');
 
-                // usort function - compare everyting in the array and sort
+                // usort function - compare everything in the array and sort
                 function event_sort($a, $b) {
                     if ($a['start'] == $b['start']) {
                         return 0;
@@ -77,13 +77,14 @@ get_header(); ?>
                         <div class="grid grid-cols-12 gap-4">
                             <div class="col-span-12 md:col-span-12 text-left">
                                 <h1 class="text-black text-3xl uppercase"><?php echo $row['title'] ?> </h1>
-                                <h2 class="text-black text-lg italics uppercase pb-5"><?php echo $row['start'] ?>
+                                <h2 class="text-black text-lg italics uppercase pb-5 inline"><?php echo $row['start'] ?></h2>
                                 <!-- Because I'll forget, this checks to see if "end" exists and doesn't display the line if it doesn't. Used when
                                      the event only has a start date given, IE, a single day event. -->
                                 <?php if ($row['end'] ): ?>
-                                    <?php echo ' - ' . $row['end'] ?>  </h2>
+                                    <?php echo '<h2 class = "text-black text-lg italics uppercase pb-5 inline"> - ' . $row['end'] . "</h2>"?>
                                 <?php endif; ?>
-                                <?php echo $row['copy'] ?>
+
+                                <div class = "events-wysiwyg"><?php echo $row['copy'] ?></div>
 
                                 <div class="pt-5">
                                     <?php if ($row['button_link'] ): ?>
@@ -94,13 +95,6 @@ get_header(); ?>
                                         </a>
                                     <?php endif; ?>
 
-                                    <?php if ($row['button_link_2'] ): ?>
-                                        <a href="<?php echo $row['button_link_2'] ?>">
-                                            <button class="mx-auto lg:mx-0 hover:underline border-orange border-2 text-orange font-bold rounded-md py-1 px-8 focus:outline-none focus:shadow-outline transform transition hover:scale-105 duration-300 ease-in-out">
-                                                <?php echo $row['button_text_2'] ?>
-                                            </button>
-                                        </a>
-                                    <?php endif; ?>
                                 </div>
                             </div>
                         </div>
