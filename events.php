@@ -27,7 +27,7 @@ get_header(); ?>
                          style="background: linear-gradient(
                              rgba(0, 0, 0, 0.45),
                              rgba(0, 0, 0, 0.45)
-                             ), url('<?php the_sub_field('background_image') ?>') <?php the_sub_field('x_position') ?> <?php the_sub_field('y_position') ?> ; background-repeat: no-repeat; background-size: cover;">
+                             ), url('<?php the_sub_field('background_image') ?>') <?php the_sub_field('x-position') ?> <?php the_sub_field('y-position') ?> ; background-repeat: no-repeat; background-size: cover;">
                     </div>
                 </div>
 
