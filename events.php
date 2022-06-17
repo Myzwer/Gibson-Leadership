@@ -57,13 +57,7 @@ get_header(); ?>
 
                 // usort function - compare everything in the array and sort
                 function event_sort($a, $b) {
-                    if ($a['start'] == $b['start']) {
-                        return 0;
-                    } elseif ($a['start'] < $b['start']) {
-                        return 1;
-                    } else {
-                        return -1;
-                    }
+                    return strtotime($a['start']) - strtotime($b['start']);
                 }
                 foreach ($repeater as $row) {
                     // Get the current time minus a day.
