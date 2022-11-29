@@ -94,7 +94,7 @@ get_header(); ?>
                      style="background: linear-gradient(
                       rgba(0, 0, 0, 0.0),
                       rgba(0, 0, 0, 0.0)
-                    ), url('<?php the_field('side_photo') ?>') top center; background-repeat: no-repeat; background-size: cover;">
+                    ), url('<?php the_field('side_photo') ?>') top right; background-repeat: no-repeat; background-size: cover;">
                 </div>
             </div>
 
