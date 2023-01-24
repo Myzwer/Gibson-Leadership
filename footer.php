@@ -28,8 +28,9 @@
                 <?php wp_nav_menu( array( 'theme_location' => 'footer-column-2' ) ); ?>
             </div>
             <div class="footer-icons text-center">
-                <a href="#"><i class="fa fa-facebook"></i></a>
-                <a href="#"><i class="fa fa-instagram"></i></a>
+                <a href="https://www.facebook.com/grgibson"><i class="fa fa-facebook"></i></a>
+                <a href="https://www.instagram.com/gibsonleadership/?hl=en"><i class="fa fa-instagram"></i></a>
+                <a href="https://twitter.com/greggibson86"><i class="fa fa-twitter"></i></a>
             </div>
             <p class = "copyright">© <?php echo date("Y"); ?> Gibson Leadership</p>
         </div>
