@@ -1,6 +1,6 @@
 <?php
 /**
- * Template Name: Resource Confirmation
+ * Template Name: Form Submission Successful
  *
  *
  * @link https://codex.wordpress.org/Template_Hierarchy
@@ -18,12 +18,13 @@ get_header(); ?>
             <div class="md:text-left md:mx-10">
 
 
-                <p class="md:mt-10 text-xl"><?php the_field('title'); ?></p>
-                <h1 class="uppercase text-2xl md:text-3xl"><?php the_field('subtitle'); ?></h1>
+
+                <h1 class="md:mt-10 uppercase text-2xl md:text-3xl"><?php the_field('title'); ?></h1>
+                <p class=" text-xl"><?php the_field('subtitle'); ?></p>
                 <p><?php the_field('instructions'); ?></p>
-                <?php if (have_rows('resource_button')): ?>
-                    <?php while (have_rows('resource_button')): the_row(); ?>
-                        <a href="<?php the_sub_field('download_link') ?>" download>
+                <?php if (have_rows('button')): ?>
+                    <?php while (have_rows('button')): the_row(); ?>
+                        <a href="<?php the_sub_field('button_link') ?>">
                             <button class="mx-auto mt-3 lg:mx-0 hover:underline bg-orange text-white font-bold rounded-full py-2 px-8 shadow-lg focus:outline-none focus:shadow-outline transform transition hover:scale-105 duration-300 ease-in-out">
                                 <?php the_sub_field('button_text') ?>
                             </button>
