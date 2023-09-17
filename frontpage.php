@@ -46,35 +46,27 @@ get_header(); ?>
                 <img src="<?php the_field('gl_logo') ?>" alt="Gibson Leadership Logo">
             </div>
             <div class="p-5">
-                <h2 class="text-white uppercase text-xl pt-5"><?php the_field('header_tagline') ?></h2>
-
-               <!-- <?php /*if (have_rows('primary_cta_button')): */?>
-                    <?php /*while (have_rows('primary_cta_button')): the_row(); */?>
-                            <button id="two"class=" button mx-auto mt-3 lg:mx-0 hover:underline bg-orange text-white font-bold rounded-full py-2 px-8 shadow-lg focus:outline-none focus:shadow-outline transform transition hover:scale-105 duration-300 ease-in-out">
-                                <?php /*the_sub_field('button_text') */?>
-                            </button>
-                    <?php /*endwhile; */?>
-                --><?php /*endif; */?>
+                <div class="text-white pt-5 prose text-center mx-auto force-white"><?php the_field('header_tagline') ?></div>
             </div>
         </div>
     </div>
 
 
     <div class="bg-white">
-        <div class="bg-no-repeat bg-scroll bg-cover relative pb-8"
+        <div class="bg-no-repeat bg-scroll bg-cover relative pb-10"
              style="background: linear-gradient(
   rgba(245, 235, 232, 0.45),
   rgba(245, 235, 232, 0.45)
-), url('<?php the_field('waves_background') ?>') center center;">
-            <div class="m-4 md:m-10 lg:max-w-6xl lg:text-center lg:mx-auto pt-10">
+), url('<?php the_field('waves_background', 'options'); ?>') center center;">
+            <div class=" lg:max-w-6xl lg:text-center lg:mx-auto pt-10">
                 <div class="grid grid-cols-12">
                     <div class="col-span-12">
-                        <div class="text-center mb-1 wysiwyg">
+                        <div class="text-center mb-1 prose mx-auto max-w-none">
                             <?php the_field('all_copy') ?>
                             <?php if (have_rows('copy_cta_button')): ?>
                                 <?php while (have_rows('copy_cta_button')): the_row(); ?>
                                     <a href="<?php the_sub_field('button_link') ?>">
-                                        <button class="mx-auto mt-3 lg:mx-0 hover:underline bg-orange text-white font-bold rounded-full py-2 px-8 shadow-lg focus:outline-none focus:shadow-outline transform transition hover:scale-105 duration-300 ease-in-out">
+                                        <button class="mx-auto mt-3 lg:mx-0 bg-orange text-white font-bold rounded-full py-2 px-8 shadow-lg focus:outline-none focus:shadow-outline transform transition hover:scale-105 duration-300 ease-in-out">
                                             <?php the_sub_field('button_text') ?>
                                         </button>
                                     </a>
@@ -87,28 +79,32 @@ get_header(); ?>
         </div>
     </div>
 
+
+<!--Switch the GF form to use ACF so it looks cleaner
+Sky background on left with graphic sitting on top
+Fix text on right to be not as bulky -->
+
     <div class="bg-blue relative">
         <div class="grid grid-cols-12 md:h-3/6">
-            <div class="hidden md:block md:col-span-6">
+            <div class="block col-span-12 md:col-span-6">
                 <div class="bg-no-repeat bg-scroll bg-cover relative pb-8 h-full"
                      style="background: linear-gradient(
                       rgba(0, 0, 0, 0.0),
                       rgba(0, 0, 0, 0.0)
                     ), url('<?php the_field('side_photo') ?>') top right; background-repeat: no-repeat; background-size: cover;">
+                    <div class="px-10 py-10 content-middle-medium">
+                    <img class = "rounded-xl shadow-xl" src="<?php the_field("form_graphic"); ?>" alt="Newsletter Graphic">
+                    </div>
                 </div>
             </div>
 
             <div class="col-span-12 md:col-span-6 relative p-5 md:px-10 md:py-40">
                 <div class="">
                     <h2 class="uppercase text-white font-bold text-4xl md:text-5xl"><?php the_field('form_title') ?></h2>
-                    <h3 class="uppercase text-white text-2xl md:text-3xl pt-3"><?php the_field('form_subtitle') ?></h3>
+                    <h3 class="text-white text-2xl md:text-2xl pt-3"><?php the_field('form_subtitle') ?></h3>
                     <div class="text-white pt-10">
-                        <?php if (have_posts()) : while (have_posts()) : the_post();
-                            the_content();
-                        endwhile;
-                        else: ?>
-                            <p>Sorry, no posts matched your criteria.</p>
-                        <?php endif; ?>
+                        <?php echo do_shortcode('[gravityform id="1"]'); ?>
+
                         <p class = "opacity-60 text-xs">This site is protected by reCAPTCHA and the Google
                             <a class = "underline" href="https://policies.google.com/privacy">Privacy Policy</a> and
                             <a class = "underline" href="https://policies.google.com/terms">Terms of Service</a> apply.</p>

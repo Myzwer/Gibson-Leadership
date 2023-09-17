@@ -42,3 +42,15 @@
     margin-left: 10px;
   }
 }
+
+.force-white {
+  h1, h2, h3, h4, h5, h6, p {
+    color: #FFFFFF !important;
+  }
+}
+
+.force-black {
+  h1, h2, h3, h4, h5, h6, p {
+    color: #000000 !important;
+  }
+}
