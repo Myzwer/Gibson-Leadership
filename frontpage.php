@@ -86,22 +86,22 @@ Fix text on right to be not as bulky -->
 
     <div class="bg-blue relative">
         <div class="grid grid-cols-12 md:h-3/6">
-            <div class="block col-span-12 md:col-span-6">
+            <div class="block col-span-12 lg:col-span-6">
                 <div class="bg-no-repeat bg-scroll bg-cover relative pb-8 h-full"
                      style="background: linear-gradient(
                       rgba(0, 0, 0, 0.0),
                       rgba(0, 0, 0, 0.0)
                     ), url('<?php the_field('side_photo') ?>') top right; background-repeat: no-repeat; background-size: cover;">
-                    <div class="px-10 py-10 content-middle-medium">
-                    <img class = "rounded-xl shadow-xl" src="<?php the_field("form_graphic"); ?>" alt="Newsletter Graphic">
+                    <div class="px-10 py-10 content-middle-large">
+                    <img class = "rounded-xl shadow-xl xl:max-w-xl mx-auto" src="<?php the_field("form_graphic"); ?>" alt="Newsletter Graphic">
                     </div>
                 </div>
             </div>
 
-            <div class="col-span-12 md:col-span-6 relative p-5 md:px-10 md:py-40">
+            <div class="col-span-12 lg:col-span-6 relative p-5 md:px-10 md:py-40">
                 <div class="">
                     <h2 class="uppercase text-white font-bold text-4xl md:text-5xl"><?php the_field('form_title') ?></h2>
-                    <h3 class="text-white text-2xl md:text-2xl pt-3"><?php the_field('form_subtitle') ?></h3>
+                    <h3 class="text-white text-2xl lg:text-2xl pt-3"><?php the_field('form_subtitle') ?></h3>
                     <div class="text-white pt-10">
                         <?php echo do_shortcode('[gravityform id="1"]'); ?>
 
