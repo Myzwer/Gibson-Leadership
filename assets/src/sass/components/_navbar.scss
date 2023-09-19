@@ -34,19 +34,22 @@ $button-hover-color: #de5c18; // What hover color do you want the button to be?
   font-weight: 400;
   line-height: $nav-height;
   padding-left: 20px;
-  position: absolute;
+  position: relative;
   text-transform: uppercase;
+  z-index: 15;
   a,
   a:visited {
     color: $nav-font-color;
     text-decoration: none;
+    position: relative;
+    z-index: 10;
   }
 
   // If you change your navbar height, you may need to adjust this.
   img {
-    height: 55px;
+    height: 50px;
     padding-right: 15px;
-    padding-top: 8px;
+    margin-top: 10px;
   }
 
   h1 {
@@ -58,6 +61,7 @@ $button-hover-color: #de5c18; // What hover color do you want the button to be?
 .nav-container {
   margin: 0 auto;
   max-width: $content-width;
+  z-index: 1;
 }
 
 // Navigation
@@ -170,7 +174,7 @@ nav {
   left: 18px;
   padding: 10px 35px 16px 0;
   position: absolute;
-  top: 22px;
+  top: 28px;
 
   span,
   span:before,
@@ -213,7 +217,6 @@ nav {
     }
   }
 }
-
 
 .nav-list > li:last-of-type {
   align-self: center;
@@ -262,7 +265,7 @@ nav {
 
   nav ul li:last-of-type a,
   nav ul li:last-of-type a:visited {
-    line-height: 1px;
+    line-height: 10px;
     padding: 15px;
   }
 }
