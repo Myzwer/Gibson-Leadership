@@ -1,77 +1,44 @@
+import $ from "jquery";
 import "../sass/frontend.scss";
 
-// NAV MENU
-(function ($) {
-  // Begin jQuery
-  $(function () {
-    // DOM ready
+$(document).ready(function () {
+  // If a link has a dropdown, add sub menu toggle.
+  $("nav ul li a:not(:only-child)").on("click", function (e) {
+    e.preventDefault(); // Prevent the default action of the event
 
-    // If a link has a dropdown, add sub menu toggle.
-    $("nav ul li a:not(:only-child)").click(function (e) {
-      // Remove "active-dropdown" class from other anchor elements
-      $("nav ul li a").not(this).removeClass("active-dropdown");
+    // Remove "active-dropdown" class from other anchor elements
+    $("nav ul li a").not(this).removeClass("active-dropdown");
 
-      // Toggle the "active-dropdown" class on the clicked anchor element
-      $(this).toggleClass("active-dropdown");
+    // Toggle the "active-dropdown" class on the clicked anchor element
+    $(this).toggleClass("active-dropdown");
 
-      // Toggle the visibility of the sibling dropdown
-      const mediaQuery = window.matchMedia("(max-width: 64em)");
+    // Toggle the visibility of the sibling dropdown
+    const mediaQuery = window.matchMedia("(max-width: 64em)");
 
-      // Check the screen size using the media query
-      if (mediaQuery.matches) {
-        // Mobile: Use slideToggle()
-        $(this).siblings(".nav-dropdown").slideToggle();
-      } else {
-        // Desktop: Use toggle()
-        $(this).siblings(".nav-dropdown").toggle();
-      }
+    // Check the screen size using the media query
+    if (mediaQuery.matches) {
+      // Mobile: Use slideToggle()
+      $(this).siblings(".nav-dropdown").slideToggle();
+    } else {
+      // Desktop: Use toggle()
+      $(this).siblings(".nav-dropdown").toggle();
+    }
 
-      // Close one dropdown when selecting another
-      $(".nav-dropdown").not($(this).siblings()).hide();
+    // Close one dropdown when selecting another
+    $(".nav-dropdown").not($(this).siblings()).hide();
 
-      e.stopPropagation();
-    });
-
-    // Clicking away from dropdown will remove the dropdown class and active-dropdown class
-    $("html").click(function () {
-      $(".nav-dropdown").hide();
-      $("nav ul li a:not(:only-child)").removeClass("active-dropdown");
-    });
-
-    // Toggle open and close nav styles on click
-    $("#nav-toggle").click(function () {
-      $("nav ul").slideToggle();
-    });
-
-    // Hamburger to X toggle
-    $("#nav-toggle").on("click", function () {
-      this.classList.toggle("active");
-    });
+    e.stopPropagation();
   });
-})(jQuery); // end jQuery
 
-// Add modal id and class for... well the modal.
-/* jQuery(document).ready(function ($) {
-  $(".nav-list > li:last-child").attr("id", "one");
+  // Clicking away from dropdown will remove the dropdown class and active-dropdown class
+  $("html").on("click", function () {
+    $(".nav-dropdown").hide();
+    $("nav ul li a:not(:only-child)").removeClass("active-dropdown");
+  });
+
+  // Toggle open and close nav styles and hamburger to X toggle on click
+  $("#nav-toggle").on("click", function () {
+    $("nav ul").slideToggle();
+    this.classList.toggle("active");
+  });
 });
-jQuery(document).ready(function ($) {
-  $(".nav-list > li:last-child").attr("class", "button");
-}); */
-
-// MODAL POPUP
-// (function ($) {
-  // The JS modal for all "mark your calendar" buttons.
-/*  window.onload = function () {
-    $(".button").click(function () {
-      const buttonId = $(this).attr("id");
-      $("#modal-container").removeAttr("class").addClass(buttonId);
-      $("body").addClass("modal-active");
-    });
-
-    $(document).on("click", "#modal-container", function (event) {
-      if (event.target.closest(".modal")) return;
-      $("#modal-container").addClass("out");
-      $("body").removeClass("modal-active");
-    });
-  };
-})(jQuery);*/ // end jQuery
