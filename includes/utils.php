@@ -7,7 +7,7 @@
  * Usage: Include this file in functions.php to apply the alphabetization filter to page templates.
  *
  * @package WordPress
- * @subpackage Pre_Launch_WP
+ * @subpackage GL_WP
  * @author Josh Forrester <josh@onefortyfivedesign.com>
  * @version 1.0.0
  */

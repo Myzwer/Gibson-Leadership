@@ -10,7 +10,8 @@
  *
  * @package WordPress
  * @subpackage GL_WP
- * @since 1.0.0
+ * @author Josh Forrester <josh@onefortyfivedesign.com>
+ * @version 1.0.0
  */
 ?>
 

@@ -4,7 +4,10 @@
  *
  * @link https://developer.wordpress.org/themes/basics/template-hierarchy/#single-post
  *
- * @package wordpack-theme
+ * @package WordPress
+ * @subpackage GL_WP
+ * @author Josh Forrester <josh@onefortyfivedesign.com>
+ * @version 1.0.0
  */
 
 get_header();

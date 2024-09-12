@@ -2,13 +2,14 @@
 /**
  * Template Name: Front Page
  *
- * The Frontpage of the Wordpack Theme
+ * This template is used to display the homepage of the WordPress site.
  *
  * @link https://developer.wordpress.org/themes/basics/template-hierarchy/
  *
  * @package WordPress
  * @subpackage GL_WP
- * @since 1.0.0
+ * @author Josh Forrester <josh@onefortyfivedesign.com>
+ * @version 1.0.0
  */
 
 get_header(); ?>

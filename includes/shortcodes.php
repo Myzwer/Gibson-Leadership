@@ -7,7 +7,7 @@
  * Usage: These shortcodes are linked in the main functions.php file and can be used in the content or widgets.
  *
  * @package WordPress
- * @subpackage Pre_Launch_WP
+ * @subpackage GL_WP
  * @author Josh Forrester <josh@onefortyfivedesign.com>
  * @version 1.0.0
  */

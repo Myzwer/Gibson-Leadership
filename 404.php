@@ -2,13 +2,12 @@
 /**
  * Template Name: 404 Error
  *
- *
- * @link https://codex.wordpress.org/Template_Hierarchy
- *
+ * This template is used when the server cannot find a requested resource.
  *
  * @package WordPress
  * @subpackage GL_WP
- * @since 1.0.0
+ * @author Josh Forrester <josh@onefortyfivedesign.com>
+ * @version 1.0.0
  */
 
 get_header(); ?>

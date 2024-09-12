@@ -11,7 +11,7 @@
  * @link: https://www.wpbeginner.com/wp-tutorials/how-to-properly-add-javascripts-and-styles-in-wordpress/
  *
  * @package WordPress
- * @subpackage Pre_Launch_WP
+ * @subpackage GL_WP
  * @author Josh Forrester <josh@onefortyfivedesign.com>
  * @version 1.0.0
  */
